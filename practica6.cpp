@@ -6,11 +6,13 @@
 using namespace std;
 class Fecha {
 public:
-  // Fecha(time_t time) {
-  //   this->dia = time.day;
-  //   this->mes = time.month;
-  //   this->anio = time.year;
-  // }
+  Fecha(time_t time) {
+    struct tm *tm_info = localtime(&time);
+
+    this->dia = tm_info->tm_wday;
+    this->mes = tm_info->tm_mon;
+    this->anio = tm_info->tm_year;
+  }
 
   Fecha(string dia, string mes, string anio) : dia(dia), mes(mes), anio(anio) {}
 
