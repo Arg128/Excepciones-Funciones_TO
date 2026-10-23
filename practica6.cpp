@@ -5,7 +5,14 @@
 
 using namespace std;
 class Fecha {
-  Fecha() {}
+public:
+  // Fecha(time_t time) {
+  //   this->dia = time.day;
+  //   this->mes = time.month;
+  //   this->anio = time.year;
+  // }
+
+  Fecha(string dia, string mes, string anio) : dia(dia), mes(mes), anio(anio) {}
 
   void operator<<(char *arg) {
     return format("DATE : {0} // {1} // {2}", this->dia, this->mes, this->anio);
