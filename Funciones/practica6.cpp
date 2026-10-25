@@ -33,6 +33,6 @@ private:
 
 int main(int argc, char *argv[]) {
   Fecha *primero = new Fecha(10, 10, 10);
-  cout << "Fecha de : " << primero << endl;
+  cout << "Fecha de : " << *primero << endl;
   return 0;
 }
