@@ -13,12 +13,18 @@ int main() {
         cout << "Seleccione una opcion: ";
         cin >> opcion;
 
-        if (opcion == 4) {
+        if (opcion == 1) {
+            cout << "Ingrese nombre del alumno: ";
+            cin >> nombre;
+            cout << "Alumno registrado: " << nombre << "\n";
+        }
+        else if (opcion == 4) {
             cout << "Programa finalizado.\n";
-        } else {
+        }
+        else {
             cout << "Opcion seleccionada: " << opcion << "\n";
         }
-
+        
     } while (opcion != 4);
 
     return 0;
