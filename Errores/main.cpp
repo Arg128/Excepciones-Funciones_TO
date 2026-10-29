@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 int main() {
@@ -15,9 +16,15 @@ int main() {
         cin >> opcion;
 
         if (opcion == 1) {
+            ofstream archivo("alumnos.txt", ios::app);
+
             cout << "Ingrese nombre del alumno: ";
             cin >> nombre;
-            cout << "Alumno registrado: " << nombre << "\n";
+
+            archivo << nombre << "\n";
+            archivo.close();
+
+            cout << "Alumno guardado correctamente.\n";
         }
         else if (opcion == 4) {
             cout << "Programa finalizado.\n";
