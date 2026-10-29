@@ -11,39 +11,24 @@ class Fecha {
 public:
   Fecha(time_t time) {
     struct tm *tm_info = localtime(&time);
-    Fecha(time_t time) {
-        struct tm *tm_info = localtime(&time);
 
     this->dia = tm_info->tm_wday;
     this->mes = tm_info->tm_mon;
     this->anio = tm_info->tm_year;
   }
-        this->dia = tm_info->tm_wday;
-        this->mes = tm_info->tm_mon;
-        this->anio = tm_info->tm_year;
-    }
 
-<<<<<<< HEAD
   Fecha(size_t dia, size_t mes, size_t anio) : dia(dia), mes(mes), anio(anio) {
     validar();
   }
-=======
-    Fecha(size_t dia, size_t mes, size_t anio) : dia(dia), mes(mes), anio(anio) {}
->>>>>>> b24a65372a6cd559e1c727f2dfa41b40f8b31f64
 
   friend ostream &operator<<(ostream &os, const Fecha &obj) {
-    friend ostream &operator<<(ostream &os, const Fecha &obj) {
 
     os << obj.dia << "/" << obj.mes << "/" << obj.anio;
-        os << obj.dia << "/" << obj.mes << "/" << obj.anio;
 
     return os;
   }
-        return os;
-    }
 
 private:
-<<<<<<< HEAD
   static bool esBisiesto(size_t a) {
     return (a % 4 == 0 && a % 100 != 0) || a % 400 == 0;
   }
@@ -68,15 +53,4 @@ int main(int argc, char *argv[]) {
   Fecha *primero = new Fecha(10, 13, 10);
   cout << "Fecha de : " << *primero << endl;
   return 0;
-=======
-    size_t dia;
-    size_t mes;
-    size_t anio;
-};
-
-int main(int argc, char *argv[]) {
-    Fecha *primero = new Fecha(10, 10, 10);
-    cout << "Fecha de : " << *primero << endl;
-    return 0;
->>>>>>> b24a65372a6cd559e1c727f2dfa41b40f8b31f64
 }
