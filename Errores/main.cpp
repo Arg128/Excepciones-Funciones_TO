@@ -3,6 +3,7 @@ using namespace std;
 
 int main() {
     int opcion;
+    string nombre;
 
     do {
         cout << "\n--- SISTEMA DE ALUMNOS ---\n";
