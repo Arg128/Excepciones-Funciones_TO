@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     int opcion;
-    string nombre;
+    string nombre, buscado;
 
     do {
         cout << "\n--- SISTEMA DE ALUMNOS ---\n";
@@ -25,6 +25,29 @@ int main() {
             archivo.close();
 
             cout << "Alumno guardado correctamente.\n";
+        }
+        else if (opcion == 2) {
+            ifstream archivo("alumnos.txt");
+            string linea;
+            bool encontrado = false;
+
+            cout << "Ingrese nombre a buscar: ";
+            cin >> buscado;
+
+            while (getline(archivo, linea)) {
+                if (linea == buscado) {
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if (encontrado) {
+                cout << "Alumno encontrado.\n";
+            } else {
+                cout << "Alumno no encontrado.\n";
+            }
+
+            archivo.close();
         }
         else if (opcion == 4) {
             cout << "Programa finalizado.\n";
