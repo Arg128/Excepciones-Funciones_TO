@@ -1,4 +1,4 @@
-# Portafolio de Proyectos: C++ Avanzado
+# REsolucion de Ejercicios: C++ Tecnologia de Objetos
 
 El presente portafolio integra los desarrollos realizados sobre los ejercicos de programación en C++. Este trabajo abarca desde la implementación de manejo de excepciones, hasta el diseño orientado a objetos aplicando conceptos de sobrecarga y eficiencia.
 
